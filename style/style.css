@@ -718,8 +718,7 @@ footer .logo ul li a img {
 }
 
 .order .menu ul {
-  width: 95%;
-  padding: 0 1rem;
+  width: 98%;
   margin: auto;
 }
 
@@ -768,11 +767,11 @@ footer .logo ul li a img {
 
 .order .meals .searchAndShop .search {
   margin: 5px;
-  width: 100%;
+  width: 60%;
 }
 
 .order .meals .searchAndShop .search input {
-  width: 300px;
+  width: 90%;
   background-color: #efe9e7;
   border: 2px solid #3d1101;
   padding: 3px;
@@ -850,13 +849,12 @@ footer .logo ul li a img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow: hidden;
   position: relative;
 }
 
 .order .meals .meal li .produceImg img {
   width: 100%;
-  height: 100%;
+  z-index: 5;
 }
 
 .order .meals .meal li .produceImg .heart {
@@ -874,18 +872,60 @@ footer .logo ul li a img {
   cursor: pointer;
 }
 
-.order .meals .meal li h2 {
+.order .meals .meal li .produceImg .hot {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  top: -5px;
+  right: -6px;
+  overflow: hidden;
+}
+
+.order .meals .meal li .produceImg .hot .hotFood {
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #0c9;
+  line-height: 24px;
+  top: 16px;
+  right: -30px;
+  width: 120px;
+  height: 26px;
+  z-index: 5;
+}
+
+.order .meals .meal li .produceImg .hot::before {
+  content: "";
+  position: absolute;
+  border: 6px solid #029e77;
+  bottom: 75px;
+  right: 65px;
+  z-index: 0;
+}
+
+.order .meals .meal li .produceImg .hot::after {
+  content: "";
+  position: absolute;
+  border: 6px solid #029e77;
+  bottom: 8px;
+  right: 0px;
+  z-index: 0;
+}
+
+.order .meals .meal li h4 {
   font-size: 20px;
   padding: 10px;
 }
 
-.order .meals .meal li h3 {
+.order .meals .meal li span {
   font-size: 12px;
   padding-bottom: 20px;
   position: relative;
 }
 
-.order .meals .meal li h3::before {
+.order .meals .meal li span::before {
   content: "";
   position: absolute;
   width: 50%;
@@ -897,7 +937,7 @@ footer .logo ul li a img {
   margin: auto;
 }
 
-.order .meals .meal li h4 {
+.order .meals .meal li p {
   font-family: Roboto-Light;
   font-size: 20px;
   color: #3d1101;
@@ -910,18 +950,12 @@ footer .logo ul li a img {
   width: 80%;
   cursor: pointer;
   border-radius: 3px;
-}
-
-.order .meals .meal li button:active {
-  border: 2px solid #262524ad;
-}
-
-.order .meals .meal li button:active a {
-  color: #262524ad;
-}
-
-.order .meals .meal li button a {
   color: #ff5e45;
+}
+
+.order .meals .meal li button:hover {
+  background-color: #ff5e45;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -996,6 +1030,24 @@ footer .logo ul li a img {
   .loginOrEnroll .flex .form .enroll .terms {
     display: none;
   }
+  .order {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 3rem 0;
+  }
+  .order .menu {
+    width: 98%;
+  }
+  .order .meals {
+    width: 98%;
+  }
+  .order .meals .searchAndShop {
+    margin: 10px 0;
+  }
+  .order .meals .searchAndShop .search {
+    width: calc(95% + 30px);
+  }
   .order .meals .meal li {
     width: calc(100% / 2 - 1rem);
   }
@@ -1027,20 +1079,11 @@ footer .logo ul li a img {
     width: 45px;
     height: 45px;
   }
-  .order {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 3rem 0;
-  }
-  .order .menu {
-    width: 98%;
-  }
   .order .meals .searchAndShop {
     margin: 10px;
   }
-  .order .meals .searchAndShop .search input {
-    width: calc(90% - 20px);
+  .order .meals .searchAndShop .search {
+    width: 90%;
   }
   .order .meals .meal {
     -webkit-box-pack: center;
@@ -1058,6 +1101,9 @@ footer .logo ul li a img {
   }
   .loginOrEnroll .flex .form form {
     width: 200px;
+  }
+  .order .meals .searchAndShop .search input {
+    width: 85%;
   }
 }
 /*# sourceMappingURL=style.css.map */

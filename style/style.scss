@@ -579,8 +579,8 @@ footer {
       line-height: 32px;
     }
     ul {
-      width: 95%;
-      padding: 0 1rem;
+      width: 98%;
+
       margin: auto;
 
       li {
@@ -617,9 +617,9 @@ footer {
 
       .search {
         margin: 5px;
-        width: 100%;
+        width: 60%;
         input {
-          width: 300px;
+          width: 90%;
           background-color: #efe9e7;
           border: 2px solid #3d1101;
           padding: 3px;
@@ -665,6 +665,7 @@ footer {
       li {
         width: calc(100% / 3 - 1rem);
         margin: 0.5rem;
+
         background: #efe9e7;
         box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
         text-align: center;
@@ -673,12 +674,11 @@ footer {
           display: flex;
           align-items: center;
           justify-content: center;
-          overflow: hidden;
           position: relative;
 
           img {
             width: 100%;
-            height: 100%;
+            z-index: 5;
           }
           .heart {
             position: absolute;
@@ -692,12 +692,53 @@ footer {
           a {
             cursor: pointer;
           }
+          .hot {
+            position: absolute;
+            width: 85px;
+            height: 85px;
+            top: -5px;
+            right: -6px;
+            overflow: hidden;
+
+            .hotFood {
+              position: absolute;
+              transform: rotate(45deg);
+              font-size: 14px;
+              color: #ffffff;
+              background-color: #0c9;
+              line-height: 24px;
+              top: 16px;
+              right: -30px;
+              width: 120px;
+              height: 26px;
+
+              z-index: 5;
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              border: 6px solid #029e77;
+              bottom: 75px;
+              right: 65px;
+              z-index: 0;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              border: 6px solid #029e77;
+
+              bottom: 8px;
+              right: 0px;
+              z-index: 0;
+            }
+          }
         }
-        h2 {
+        h4 {
           font-size: 20px;
+
           padding: 10px;
         }
-        h3 {
+        span {
           font-size: 12px;
           padding-bottom: 20px;
           position: relative;
@@ -713,7 +754,7 @@ footer {
             margin: auto;
           }
         }
-        h4 {
+        p {
           font-family: Roboto-Light;
           font-size: 20px;
           color: #3d1101;
@@ -725,14 +766,11 @@ footer {
           width: 80%;
           cursor: pointer;
           border-radius: 3px;
-          &:active {
-            border: 2px solid #262524ad;
-            a {
-              color: #262524ad;
-            }
-          }
-          a {
-            color: #ff5e45;
+          color: #ff5e45;
+          &:hover {
+            background-color: #ff5e45;
+
+            color: #fff;
           }
         }
       }
@@ -843,7 +881,19 @@ footer {
     }
   }
   .order {
+    justify-content: center;
+    padding: 3rem 0;
+    .menu {
+      width: 98%;
+    }
     .meals {
+      width: 98%;
+      .searchAndShop {
+        margin: 10px 0;
+        .search {
+          width: calc(95% + 30px);
+        }
+      }
       .meal {
         li {
           width: calc(100% / 2 - 1rem);
@@ -888,17 +938,12 @@ footer {
     }
   }
   .order {
-    justify-content: center;
-    padding: 3rem 0;
-    .menu {
-      width: 98%;
-    }
     .meals {
       .searchAndShop {
         margin: 10px;
         .search {
+          width: 90%;
           input {
-            width: calc(90% - 20px);
           }
         }
       }
@@ -922,6 +967,17 @@ footer {
       .form {
         form {
           width: 200px;
+        }
+      }
+    }
+  }
+  .order {
+    .meals {
+      .searchAndShop {
+        .search {
+          input {
+            width: 85%;
+          }
         }
       }
     }
